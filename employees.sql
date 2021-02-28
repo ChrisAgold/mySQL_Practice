@@ -69,5 +69,9 @@ SELECT * from employees;
 SELECT * from employees where birth_date between '1954-05-01' and '1956-04-20';
 SELECT count(*) from employees where birth_date between '1954-05-01' and '1956-04-20';
 
-
+select distinct first_name from employees;
+select count(distinct first_name) from employees;
+select distinct birth_date from employees;
+select distinct first_name from employees where first_name like 'E%';
+select * from employees where first_name in (select distinct first_name from employees where first_name like 'E%');
 
